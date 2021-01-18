@@ -1,30 +1,22 @@
-## NewsExplorer
+## Fourse
 ### О проекте
-+ Backend проекта NewsExplorer. Это сервис, в котором      
-можно найти новости по запросу и сохранить в личном кабинете      
-`Дипломный проект сделанный для Яндекс.Практикум`
++ Backend проекта Fourse.     
+
 
 ### Функциональность
-    Запросы с сервера - https://api.raccoondiploma.ml/        
     отправлять через Postman
 
-    POST /signup — регистрация пользователя с переданными в теле запроса:    
-     name, email, password
-    POST /signin — авторизация пользователя по email и password 
-    GET /users/me — возвращает информацию о пользователе
-    GET /articles - возвращает все сохранённые пользователем статьи
-    POST /articles — создаёт статью с переданными в теле: 
-    keyword, title, text, date, source, link и image
-    DELETE /articles/articleId — удаляет сохранённую статью  по _id
+    GET /getCourses - возвращает все курсы
+    GET /getCourse/:name - возвращает курс по его названию
+    POST /createCourse — создаёт курс с переданными в теле: 
+    name, s_info, l_info, owner, link
+    PATCH /updateCourse/:id — обновляет статью по id
+    DELETE /deleteCourse/:id — удаляет сохранённый курс по id
 
-### Доступ к серверу
-+ IP адрес: http://84.201.160.204
-+ Бэкенд проекта: https://api.raccoondiploma.ml/          
-+ https://raccoondiploma.ml/
 
 ### Развертывание проекта
 1. Установить `Node.js`
-2. Клонировать репозиторий `https://github.com/Ginger-Raccoon/news-explorer_backend.git`
+2. Клонировать репозиторий `https://github.com/Ginger-Raccoon/Fourse_back-end.git`
 3. Установить зависимости `npm i`
 4. `npm run start` запускает сервер на `localhost:3000`
 5. `npm run dev` запускает сервер на `localhost:3000` с хот релоудом
