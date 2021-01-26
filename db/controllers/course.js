@@ -18,12 +18,11 @@ module.exports.createCourse = (req, res, next) => {
 };
 
 module.exports.getCourses = (req, res) => {
-Course.findAll()
-
-  .then((courses) => res.send({data: courses}))
-  .catch((err) => {
-    console.log(err);
-  });
+  Course.findAll()
+    .then((courses) => res.send({data: courses}))
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 module.exports.getCourse = (req, res) => {
@@ -54,9 +53,12 @@ module.exports.updateCourse = (req, res) => {
 }
 
 module.exports.deleteCourse = (req, res) => {
+  const body = req.body
   Course.destroy({
     where: {
-      id: req.params.id
+      id: body.id
     }
   })
+  .then(() => res.send(`Курс ${body.name} успешно удален`))
+  .catch((err) => console.log(err));
 }
