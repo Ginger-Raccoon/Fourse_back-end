@@ -1,7 +1,7 @@
 // импорт Sequelize
 const { Sequelize } = require('sequelize');
 // подключение к БД postgres
-const sequelize = new Sequelize('test', 'postgres', 'shkeeper',
+const sequelize = new Sequelize('Fourse', 'postgres', 'shkeeper',
   {
     dialect: "postgres",
     host: "localhost"
