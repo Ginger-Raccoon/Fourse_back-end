@@ -6,12 +6,13 @@
 ### Функциональность
     отправлять через Postman
 
-    GET /getCourses - возвращает все курсы
-    GET /getCourse/:name - возвращает курс по его названию
-    POST /createCourse — создаёт курс с переданными в теле: 
+    GET сourses — возвращает все курсы
+    GET сourse/:name — возвращает курс по его названию
+    POST courses — создаёт курс с переданными в теле: 
     name, s_info, l_info, owner, link
-    PATCH /updateCourse/:id — обновляет статью по id
-    DELETE /deleteCourse/:id — удаляет сохранённый курс по id
+    PATCH courses/:id — обновляет статью по id
+    DELETE courses/:id — удаляет сохранённый курс по id
+    POST photos — загружает фотографию из формы (обязательный тип формы: multipart/form-data, input.name: "photos") на сервер, сохраняя путь в БД  
 
 
 ### Развертывание проекта
