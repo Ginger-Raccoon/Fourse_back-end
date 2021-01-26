@@ -12,7 +12,7 @@
     name, s_info, l_info, owner, link
     PATCH courses/:id — обновляет статью по id
     DELETE courses/:id — удаляет сохранённый курс по id
-    POST photos — загружает фотографию из формы (обязательный тип формы: multipart/form-data, input.name: "photos") на сервер, сохраняя путь в БД  
+    POST photos — загружает фотографию из формы (обязательный тип формы: multipart/form-data, input.name: "photo") на сервер, сохраняя путь в БД  
 
 
 ### Развертывание проекта
